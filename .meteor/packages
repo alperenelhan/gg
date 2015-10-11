@@ -23,6 +23,8 @@ insecure                # Allow all DB writes from clients (for prototyping)
 fds:webrtc
 fds:streams
 
+kuke:clmtrackr
+
 twbs:bootstrap
 check
 random
