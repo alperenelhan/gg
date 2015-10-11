@@ -1,13 +1,20 @@
 <template name="home">
-    <video id="local-stream" src="{{remoteStream}}" autoplay muted></video>
-    <!--
-        <div class="col-xs-6">
-            <div class="stream remote-stream">
-                <h2>Remote WebRTC Video Stream</h2>
-                <video src="{{localStream}}" autoplay muted></video>
-            </div>
-        </div>-->
-    <video id="remote-stream" src="{{localStream}}" autoplay muted></video>
+    <div class = "container" >
+        <div class = "header">
+            <h1 class="h1_text"> Gesture Game </h1>
+        </div>
+                <video id="local-stream" src="{{remoteStream}}" autoplay muted></video>
+                <!--
+                    <div class="col-xs-6">
+                        <div class="stream remote-stream">
+                            <h2>Remote WebRTC Video Stream</h2>
+                            <video src="{{localStream}}" autoplay muted></video>
+                        </div>
+                    </div>-->
+                <video id="remote-stream" src="{{localStream}}" autoplay muted></video>
+        
+    </div>
+
 </template>
 
 <body>
