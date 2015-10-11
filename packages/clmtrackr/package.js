@@ -12,7 +12,18 @@ Package.describe({
 
 Package.onUse(function(api) {
     api.versionsFrom('1.2.0.2');
-    api.addFiles('clmtrackr.js', 'client');
+    api.addFiles([
+      'ct.js',
+      'utils.js',
+      'clmtrackr.js',
+      'model_pca_20_svm_emotionDetection.js',
+      'emotion_classifier.js',
+      'emotion_model.js'
+    ], 'client');
+
+    api.export([
+      'CT'
+    ], 'client');
 });
 
 Package.onTest(function(api) {
