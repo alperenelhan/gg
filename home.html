@@ -1,15 +1,25 @@
 <template name="home">
-    <video id="local-stream" src="{{remoteStream}}" autoplay muted></video>
-    <!--
-        <div class="col-xs-6">
-            <div class="stream remote-stream">
-                <h2>Remote WebRTC Video Stream</h2>
-                <video src="{{localStream}}" autoplay muted></video>
-            </div>
-        </div>-->
-    <video id="remote-stream" src="{{localStream}}" autoplay muted></video>
 </template>
 
-<body>
+
+<template name="title">
+    <div class="title">
+        Gesture Game
+    </div>
+</template>
+
+<template name="gamemodes">
+    <div id="mode-buttons">
+        <ul>
+            <li><a href="#" class="round green">:D<span class="round">Game mode 1 bla bla</span></a></li>
+            <li><a href="#" class="round red">:(<span class="round">Game mode 2 bla bla</span></a></li>
+            <li><a href="#" class="round yellow">:0<span class="round">Game mode 3 bla bla</span></a></li>
+        </ul>
+    </div>
+</template>
+
+<body class="fullscreen">
+    {{> title}}
+    {{> gamemodes}}
     {{> home}}
 </body>
