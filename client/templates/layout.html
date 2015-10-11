@@ -1,0 +1,6 @@
+<template name="layout">
+  <video id="remote-stream" src="{{remoteStream}}" autoplay muted></video>
+  <video id="local-stream" src="{{localStream}}" autoplay muted></video>
+
+  {{> Template.dynamic template=main }}
+</template>

@@ -28,3 +28,6 @@ kuke:clmtrackr
 twbs:bootstrap
 check
 random
+
+kadira:flow-router
+kadira:blaze-layout

@@ -1,4 +1,4 @@
-#local-stream {
+#remote-stream {
     position: fixed;
     right: 0;
     bottom: 0;
@@ -10,7 +10,7 @@
     background-size: cover;
 }
 
-#remote-stream {
+#local-stream {
     position: fixed;
     z-index: 0;
     right: 20px;
