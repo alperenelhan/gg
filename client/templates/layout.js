@@ -1,4 +1,4 @@
-Template.layout.onCreated(function() {
+Meteor.startup(function () {
   var mediaConfig = {
     video: true,
     audio: true
@@ -12,7 +12,7 @@ Template.layout.onCreated(function() {
 
   var config = {};
 
-  var webRTCSignaller = SingleWebRTCSignallerFactory.create(
+  webRTCSignaller = SingleWebRTCSignallerFactory.create(
     'master',
     servers,
     config,
@@ -22,20 +22,14 @@ Template.layout.onCreated(function() {
   // Creates the rtcPeerConnection
   // webRTCSignaller.start();
   webRTCSignaller.startOnlyLocalStream();
-
-  this._webRTCSignaller = webRTCSignaller;
-
-  window.testwebrtc = webRTCSignaller;
-
-  // this._webRTCSignaller.createOffer();
 });
 
 Template.layout.helpers({
   localStream: function() {
-    return Template.instance()._webRTCSignaller.getLocalStream();
+    return webRTCSignaller.getLocalStream();
   },
 
   remoteStream: function() {
-    return Template.instance()._webRTCSignaller.getRemoteStream();
+    return webRTCSignaller.getRemoteStream();
   }
 });
