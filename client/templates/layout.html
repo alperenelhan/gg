@@ -1,6 +1,11 @@
 <template name="layout">
-  <video id="remote-stream" src="{{remoteStream}}" autoplay muted></video>
-  <video id="local-stream" src="{{localStream}}" autoplay muted></video>
+  <div class="container">
+    <div class="header">
+      <h1 class="h1_text"> Gesture Game </h1>
+    </div>
+    <video id="remote-stream" src="{{remoteStream}}" autoplay muted></video>
+    <video id="local-stream" src="{{localStream}}" autoplay muted></video>
 
-  {{> Template.dynamic template=main }}
+    {{> Template.dynamic template=main }}
+  </div>
 </template>
