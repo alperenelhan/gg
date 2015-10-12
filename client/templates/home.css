@@ -5,10 +5,10 @@
    z-index: 0;
    right: 20px;
    bottom: 20px;
-   width: 200px;
-   min-width: 200px;
-   height: 150px;
-   min-height: 150px;
+   width: 400px;
+   min-width: 400px;
+   height: 300px;
+   min-height: 300px;
    -webkit-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.77);
    -moz-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.77);
    box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.77);
@@ -16,8 +16,8 @@
 
 #local-stream video {
   position: absolute;
-  width: 200px;
-  height: 150px;
+  width: 400px;
+  height: 300px;
   z-index: 90;
 }
 
@@ -67,10 +67,10 @@
    z-index: 0;
    right: 20px;
    bottom: 20px;
-   width: 200px;
-   min-width: 200px;
-   height: 150px;
-   min-height: 150px;
+   width: 400px;
+   min-width: 400px;
+   height: 300px;
+   min-height: 300px;
    -webkit-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.77);
    -moz-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.77);
    box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.77);
