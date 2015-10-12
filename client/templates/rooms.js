@@ -32,5 +32,8 @@ Template.rooms.events({
     },
     "click .room-item": function (e) {
         FlowRouter.go("/room/" + this._id);
+    },
+    "click #cancel-room": function(e) {
+        FlowRouter.go("/rooms");  
     }
 })

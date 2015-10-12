@@ -1,20 +1,30 @@
 <template name="rooms">
-    <div id="roomlist-container">
-        <div class="rooms-header">Room List</div>
-        <div id="roomlist">
-            <div class="rooms">
-                {{#each availableRooms}}
-                    <div class="room-item">
-                        <div class="room-name">{{name}}</div>
-                        <div class="room-users-status">1/2</div>
-                    </div>
-                {{/each}}
+    {{#if Game.roomId.get}}
+        <div id="roomlist-container">
+            <div id="cancel-room">
+                <ul>
+                    <li><a class="round yellow">Leave<span class="round">Are you sure?</span></a></li>
+                </ul>
             </div>
         </div>
-        <div id="create-room">
-            <form id="create-room-form" action="#">
-                <input placeholder="Create Room" type="text" class="room-name" name="roomname">
-            </form>
+    {{else}}
+        <div id="roomlist-container">
+            <div class="rooms-header">Room List</div>
+            <div id="roomlist">
+                <div class="rooms">
+                    {{#each availableRooms}}
+                        <div class="room-item">
+                            <div class="room-name">{{name}}</div>
+                            <div class="room-users-status">1/2</div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+            <div id="create-room">
+                <form id="create-room-form" action="#">
+                    <input placeholder="Create Room" type="text" class="room-name" name="roomname">
+                </form>
+            </div>
         </div>
-    </div>
+    {{/if}}
 </template>
