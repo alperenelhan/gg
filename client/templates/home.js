@@ -1,4 +1,4 @@
-Template.layout.events({
+Template.home.events({
     'click a.round': function (e) {
         value = 3000;
         var self = $(e.currentTarget);

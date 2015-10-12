@@ -23,6 +23,13 @@
     width: 160px;
 }
 
+#cancel-room {
+    color: white;
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+}
+
 #roomlist {
     position: fixed;
     top: 60px;
