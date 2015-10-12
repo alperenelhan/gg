@@ -65,7 +65,7 @@ Game = {
 
     setInterval(function () {
       Game.randomTarget();
-    }, 5000);
+    }, 3000);
 
     Game.randomTarget();
 
