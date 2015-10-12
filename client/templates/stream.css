@@ -1,33 +1,65 @@
 .start-tracker {
-  position: absolute;
-  top: -20px;
+    position: absolute;
+    top: -20px;
 }
 
 #tracker-overlay {
-  position: absolute;
-  width: 400px;
-  height: 300px;
-
-  z-index: 100;
-}
-
-#local-ss, #remote-ss {
-  position: absolute;
-  top: -350px;
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    z-index: 100;
 }
 
 #currentTarget {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  color: black;
-  font-size: 20px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: black;
+    font-size: 20px;
 }
 
 .score {
-  position: absolute;
-  top: -50px;
-  font-size: 20px;
-  color: black;
+    position: absolute;
+    top: -50px;
+    font-size: 20px;
+    color: black;
+}
+
+#result-container {
+    position: fixed;
+    left: 20px;
+    right: 440px;
+    bottom: 350px;
+    top: 20px;
+    background-color: teal;
+    -webkit-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.77);
+    -moz-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.77);
+    box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.77);
+}
+
+.vs-icon {
+    width: 50px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -30px;
+}
+
+#local-ss {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#remote-ss {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
 }

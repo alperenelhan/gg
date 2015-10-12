@@ -35,5 +35,8 @@ Template.rooms.events({
     },
     "click #cancel-room": function(e) {
         FlowRouter.go("/rooms");  
+    },
+    "click #start-game": function (e) {
+        
     }
 })
