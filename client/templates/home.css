@@ -1,9 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
-#local-stream {
+#local-stream, #remote-stream {
    position: fixed;
    z-index: 0;
-   right: 20px;
    bottom: 20px;
    width: 400px;
    min-width: 400px;
@@ -14,11 +13,19 @@
    box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.77);
 }
 
-#local-stream video {
+#local-stream video, #remote-stream video {
   position: absolute;
   width: 400px;
   height: 300px;
   z-index: 90;
+}
+
+#local-stream {
+  right: 20px;
+}
+
+#remote-stream {
+  left: 20px;
 }
 
 .title {
@@ -28,17 +35,6 @@
    margin-bottom: 25px;
    font-weight: bold;
    text-align: center;
-}
-
-#remote-stream {
-   position: fixed;
-   right: 0;
-   bottom: 0;
-   min-width: 100%;
-   min-height: 100%;
-   width: auto;
-   height: auto;
-   background-size: cover;
 }
 
 .fullscreen {

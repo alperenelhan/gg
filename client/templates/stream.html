@@ -1,6 +1,10 @@
 <template name="stream">
-  <!-- <video id="remote-stream" src="{{Game.getSignaller.localStream}}" autoplay muted></video> -->
   {{#with Game.getSignaller }}
+    <div id="remote-stream">
+      <video width="400" height="300" src="{{getLocalStream}}" autoplay muted></video>
+      <canvas width="400" height="300" id="remote-ss"></canvas>
+    </div>
+
     <div id="local-stream">
       <button class="start-tracker">Start</button>
       {{#if waitingForUserMedia }}
@@ -10,6 +14,8 @@
       {{#if getLocalStream }}
         <video width="400" height="300" src="{{getLocalStream}}" autoplay muted></video>
       {{/if}}
+
+      <canvas width="400" height="300" id="local-ss"></canvas>
 
       <canvas id="tracker-overlay" width="400" height="300"></canvas>
     </div>
