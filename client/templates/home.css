@@ -52,7 +52,7 @@
    background-size: cover;
 }
 
-body {
+.background {
  background: url(emotion.jpg) no-repeat center center fixed;
  -webkit-background-size: cover;
  -moz-background-size: cover;

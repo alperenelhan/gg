@@ -83,26 +83,6 @@ li {
 	transform: rotate(-360deg);
 }
 
-a.red {
-	background-color: rgba(239,57,50,1);
-	color: rgba(133,32,28,1);
-	border-color: rgba(133,32,28,.2);
-}
-
-a.red:hover {
-	color: rgba(239,57,50,1);
-}
-
-a.green {
-	background-color: rgba(1,151,171,1);
-	color: rgba(0,63,71,1);
-	border-color: rgba(0,63,71,.2);
-}
-
-a.green:hover {
-	color: rgba(1,151,171,1);
-}
-
 a.yellow {
 	background-color: rgba(252,227,1,1);
 	color: rgba(153,38,0,1);
@@ -110,7 +90,7 @@ a.yellow {
 }
 
 a.yellow:hover {
-	color: rgba(252,227,1,1);
+	color: white;
 }
 
 .round span.round {
@@ -133,19 +113,11 @@ a.yellow:hover {
 	-moz-text-shadow: 0 1px 1px rgba(0,0,0,.5);
 	-o-text-shadow: 0 1px 1px rgba(0,0,0,.5);
 	text-shadow: 0 1px 1px rgba(0,0,0,.5);	
-}
-
-.green span {
-	background: rgba(0,63,71,.7);		
-}
-
-.red span {
-	background: rgba(133,32,28,.7);		
+	color: black;
 }
 
 .yellow span {
-	background: rgba(161,145,0,.7);	
-
+	background: white;
 }
 
 #mode-buttons {
