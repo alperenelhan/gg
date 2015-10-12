@@ -1,18 +1,20 @@
 <template name="rooms">
-  <table>
-    <thead>
-      <tr>
-        <th>RoomId</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each availableRooms }}
-      <tr>
-        <td>{{_id}}</td>
-        <td><a class="btn-join">Join</a></td>
-      </tr>
-      {{/each}}
-    </tbody>
-  </table>
+    <div id="roomlist-container">
+        <div class="rooms-header">Room List</div>
+        <div id="roomlist">
+            <div class="rooms">
+                {{#each availableRooms}}
+                    <div class="room-item">
+                        <div class="room-name">{{name}}</div>
+                        <div class="room-users-status">1/2</div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+        <div id="create-room">
+            <form id="create-room-form" action="#">
+                <input placeholder="Create Room" type="text" class="room-name" name="roomname">
+            </form>
+        </div>
+    </div>
 </template>
