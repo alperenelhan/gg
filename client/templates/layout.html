@@ -1,6 +1,11 @@
 <template name="layout">
-  {{> Template.dynamic template=main }}
-  
+
+  {{#if Game.isReady.get }}
+    {{> Template.dynamic template=main }}
+  {{else}}
+    {{> home}}
+  {{/if}}
+
   {{> stream}}
 </template>
 
