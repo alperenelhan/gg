@@ -32,8 +32,8 @@ Game = {
 		var emotionData = ec.getBlank();
 
     var drawLoop = function () {
-      console.log('position: ', tracker.getCurrentPosition());
-			context.clearRect(0, 0, 200, 150);
+      // console.log('position: ', tracker.getCurrentPosition());
+			context.clearRect(0, 0, 400, 300);
 			//psrElement.innerHTML = "score :" + ctrack.getScore().toFixed(4);
       // debugger
 			if (tracker.getCurrentPosition()) {
@@ -42,6 +42,15 @@ Game = {
 			var cp = tracker.getCurrentParameters();
 
 			var er = ec.meanPredict(cp);
+      if(er) {
+        var max = _.chain(er).filter(function (r) {
+          return r.value > 0.5;
+        }).max(function (r) {
+          return r.value;
+        }).value();
+
+        console.log('max-emotion:', max && max.emotion);
+      }
 			// if (er) {
 			// 	updateData(er);
 			// 	for (var i = 0;i < er.length;i++) {
