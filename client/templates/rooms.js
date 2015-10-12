@@ -5,10 +5,6 @@ Template.rooms.helpers({
         }, {
             sort : {"createdAt": -1}
         });
-    },
-
-    allRooms: function() {
-      return Rooms.find();
     }
 });
 
