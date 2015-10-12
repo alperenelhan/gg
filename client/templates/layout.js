@@ -1,37 +1,8 @@
-Meteor.startup(function() {
-    var mediaConfig = {
-        video: true,
-        audio: true
-    };
-
-    var servers = {
-        iceServers: [{
-            url: "stun:stun.1.google.com:19302"
-        }]
-    };
-
-    var config = {};
-
-    webRTCSignaller = SingleWebRTCSignallerFactory.create(
-        Stream,
-        'test',
-        'master',
-        servers,
-        config,
-        mediaConfig
-    );
-
-    // Creates the rtcPeerConnection
-    webRTCSignaller.start();
-    //webRTCSignaller.startOnlyLocalStream();
-});
-
-Template.layout.helpers({
-    localStream: function() {
-        return webRTCSignaller.getLocalStream();
-    },
-
-    remoteStream: function() {
-        return webRTCSignaller.getRemoteStream();
-    }
-});
+Template.layout.events({
+  'click .start-game1': function () {
+    var roomId = Random.id();
+    FlowRouter.go('game1', {
+      roomId: roomId
+    });
+  }
+})

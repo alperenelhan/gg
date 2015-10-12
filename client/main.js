@@ -1,0 +1,1 @@
+currentSignaller = null;
