@@ -1,4 +1,14 @@
 <template name="stream">
-  <video id="remote-stream" src="{{localStream}}" autoplay muted></video>
-  <video id="local-stream" src="{{localStream}}" autoplay muted></video>
+  <!-- <video id="remote-stream" src="{{Game.getSignaller.localStream}}" autoplay muted></video> -->
+  {{#with Game.getSignaller }}
+    <div id="local-stream">
+      {{#if waitingForUserMedia }}
+        {{> spinner }}
+      {{/if}}
+
+      {{#if getLocalStream }}
+        <video src="{{getLocalStream}}" autoplay muted></video>
+      {{/if}}
+    </div>
+  {{/with}}
 </template>

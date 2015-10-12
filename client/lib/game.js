@@ -33,7 +33,8 @@ Game = {
 
     // Creates the rtcPeerConnection
     signaller.start();
-
+    signaller.createOffer();
+    
     Game.signaller = signaller;
     Game._depSignaller.changed();
   },
