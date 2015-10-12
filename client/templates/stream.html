@@ -2,12 +2,14 @@
   <!-- <video id="remote-stream" src="{{Game.getSignaller.localStream}}" autoplay muted></video> -->
   {{#with Game.getSignaller }}
     <div id="local-stream">
+      <button class="start-tracker">Start</button>
       {{#if waitingForUserMedia }}
         {{> spinner }}
       {{/if}}
 
       {{#if getLocalStream }}
-        <video src="{{getLocalStream}}" autoplay muted></video>
+        <canvas id="tracker-overlay" width="200" height="150"></canvas>
+        <video width="200" height="150" src="{{getLocalStream}}" autoplay muted></video>
       {{/if}}
     </div>
   {{/with}}

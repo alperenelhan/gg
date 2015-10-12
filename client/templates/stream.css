@@ -1,0 +1,12 @@
+.start-tracker {
+  position: absolute;
+  top: -20px;
+}
+
+#tracker-overlay {
+  position: absolute;
+  width: 200px;
+  height: 150px;
+
+  z-index: 100;
+}
