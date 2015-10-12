@@ -1,18 +1,20 @@
 <template name="rooms">
-  <table>
-    <thead>
-      <tr>
-        <th>RoomId</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each availableRooms }}
+  <div class="fullscreen" style="background-color: rgba(252,227,1,1)">
+    <table>
+      <thead>
         <tr>
-          <td>{{_id}}</td>
-          <td><a class="btn-join"></a></td>
+          <th>RoomId</th>
+          <th>Actions</th>
         </tr>
-      {{/each}}
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        {{#each availableRooms }}
+          <tr>
+            <td>{{_id}}</td>
+            <td><a class="btn-join"></a></td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
 </template>
