@@ -151,7 +151,7 @@ a.yellow:hover {
 #mode-buttons {
 	position: absolute;
     left: 50%;
-    margin-left: -154px;
+    margin-left: -50px;
     top: 50%;
-    margin-top: -83px;
+    margin-top: -50px;
 }

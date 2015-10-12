@@ -68,3 +68,12 @@ body {
    -moz-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.77);
    box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.77);
 }
+
+
+.scale {
+   -webkit-transform : scale(3000);
+   -moz-transform    : scale(3000);
+   -ms-transform     : scale(3000);
+   -o-transform      : scale(3000);
+   transform         : scale(3000);
+}
