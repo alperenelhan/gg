@@ -18,8 +18,8 @@ Game = {
   _remoteCC: null,
 
   _currentTarget: new ReactiveVar(null),
-  _localMax: 0,
-  _remoteMax: 0,
+  _localMax: new ReactiveVar(0),
+  _remoteMax: new ReactiveVar(0),
 
   init: function () {
     var tracker = new CT.clm.tracker({useWebGL : true});
@@ -39,8 +39,8 @@ Game = {
 
   randomTarget: function () {
     Game._currentTarget.set(Random.choice(['angry', 'sad', 'surprised', 'happy']));
-    Game._localMax = 0;
-    Game._remoteMax = 0;
+    Game._localMax.set(0);
+    Game._remoteMax.set(0);
   },
 
   startTracker: function () {
@@ -88,13 +88,15 @@ Game = {
           });
 
           if(r && r.value) {
-            if(r.value >= Game._localMax) {
-              Game._localMax = r.value;
+            var localMax = Game._localMax.get();
+            var remoteMax = Game._remoteMax.get();
+            if(r.value >= localMax) {
+              Game._localMax.set(r.value);
               Game.takeSS(Game._localVid, Game._localCC);
             }
 
-            if(r.value >= Game._remoteMax) {
-              Game._remoteMax = r.value;
+            if(r.value >= remoteMax) {
+              Game._remoteMax.set(r.value);
               Game.takeSS(Game._remoteVid, Game._remoteCC);
             }
           }

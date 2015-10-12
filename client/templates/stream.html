@@ -1,6 +1,8 @@
 <template name="stream">
   {{#with Game.getSignaller }}
+    <p id="currentTarget">{{Game._currentTarget.get}}</p>
     <div id="remote-stream">
+      <p id="remote-score" class="score">{{Game._remoteMax.get}}</p>
       <video width="400" height="300" src="{{getLocalStream}}" autoplay muted></video>
       <canvas width="400" height="300" id="remote-ss"></canvas>
     </div>
@@ -15,8 +17,8 @@
         <video width="400" height="300" src="{{getLocalStream}}" autoplay muted></video>
       {{/if}}
 
+      <p id="local-score" class="score">{{Game._localMax.get}}</p>
       <canvas width="400" height="300" id="local-ss"></canvas>
-
       <canvas id="tracker-overlay" width="400" height="300"></canvas>
     </div>
   {{/with}}
