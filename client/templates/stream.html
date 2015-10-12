@@ -8,9 +8,10 @@
       {{/if}}
 
       {{#if getLocalStream }}
-        <canvas id="tracker-overlay" width="200" height="150"></canvas>
         <video width="200" height="150" src="{{getLocalStream}}" autoplay muted></video>
       {{/if}}
+
+      <canvas id="tracker-overlay" width="200" height="150"></canvas>
     </div>
   {{/with}}
 </template>

@@ -25,12 +25,14 @@ Game = {
     var context = overlay.getContext('2d');
     var vid = $('#local-stream video')[0];
 
+    tracker.start(vid);
+
     var ec = new CT.emotionClassifier();
 		ec.init(CT.emotionModel);
 		var emotionData = ec.getBlank();
 
     var drawLoop = function () {
-      console.log('drawing');
+      console.log('position: ', tracker.getCurrentPosition());
 			context.clearRect(0, 0, 200, 150);
 			//psrElement.innerHTML = "score :" + ctrack.getScore().toFixed(4);
       // debugger
